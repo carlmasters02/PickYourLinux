@@ -1,5 +1,7 @@
 # PickYourLinux
 
+**Live at [pickyourlinux.com](https://pickyourlinux.com)**
+
 A guide to choosing a Linux distribution. It shows how distros are related, starting from Debian, Fedora and Arch and following each branch down to the distros built on them. A staged quiz then narrows 56 distros down to the one, and the specific edition, that fits what you're setting up.
 
 It's a static site: plain HTML, CSS and JavaScript with no build step, no framework, no cookies and no third-party requests. Fonts, logos and the one library it uses (d3) are all bundled.

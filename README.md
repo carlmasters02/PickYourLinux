@@ -25,6 +25,12 @@ python3 -m http.server 8000
 
 Then visit <http://localhost:8000>.
 
+## Deploying
+
+The repo deploys as-is to Cloudflare Workers as a static site. `wrangler.jsonc` serves the repository root, and `.assetsignore` keeps files like this README from being published. In the Cloudflare dashboard, import the repository under Workers & Pages, leave the build command empty and use `npx wrangler deploy` as the deploy command. To deploy from your own machine instead, run `npx wrangler deploy`.
+
+Cloudflare serves pages at clean URLs, so `/quiz.html` redirects to `/quiz` with the query string kept.
+
 ## Project structure
 
 ```

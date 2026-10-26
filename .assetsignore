@@ -1,0 +1,8 @@
+# Files in the repo that shouldn't be published on the site (gitignore syntax).
+.git/
+README.md
+wrangler.jsonc
+.assetsignore
+.gitignore
+.wrangler/
+node_modules/

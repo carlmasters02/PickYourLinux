@@ -1,0 +1,8 @@
+// Cloudflare Workers config: serve the repository as a static site, no build step.
+{
+  "name": "pickyourlinux",
+  "compatibility_date": "2026-08-01",
+  "assets": {
+    "directory": "./"
+  }
+}

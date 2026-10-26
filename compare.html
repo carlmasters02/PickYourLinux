@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compare · PickYourLinux</title>
+  <meta name="description" content="Compare Linux distributions side by side: lineage, desktop, package manager, updates, strengths, pros and cons.">
+  <meta name="theme-color" content="#F4F5F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15171A" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="img/mark.svg" type="image/svg+xml">
+  <script>try{var t=JSON.parse(localStorage.getItem("pyl-theme-mode"));if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="PickYourLinux home">
+        <svg class="brand-mark" viewBox="0 0 26 26" aria-hidden="true">
+          <path class="b-line" d="M6 7v14.5M6 10.5h9.5M6 16h9.5M6 21.5h9.5" fill="none" stroke-width="1.7" stroke-linecap="round"/>
+          <circle class="b-root" cx="6" cy="4.5" r="3"/>
+          <circle class="b-a" cx="19" cy="10.5" r="2.5"/>
+          <circle class="b-b" cx="19" cy="16" r="2.5"/>
+          <circle class="b-c" cx="19" cy="21.5" r="2.5"/>
+        </svg>
+        <span>PickYourLinux</span>
+      </a>
+      <nav class="nav" id="siteNav" aria-label="Main">
+        <a href="index.html#family-tree">Family tree</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="compare.html" aria-current="page">Compare<span class="count" id="compareCount" hidden>0</span></a>
+        <a href="quiz.html">Quiz</a>
+      </nav>
+      <div class="header-tools">
+        <div class="jump" role="search">
+          <svg class="jump-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.75"/><path d="m10.5 10.5 3.5 3.5" stroke-linecap="round"/></svg>
+          <input id="jumpInput" type="search" placeholder="Jump to a distro" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="jumpList" aria-autocomplete="list" aria-label="Jump to a distro">
+          <kbd>/</kbd>
+          <ul class="jump-list" id="jumpList" role="listbox" hidden></ul>
+        </div>
+        <a class="icon-btn" href="https://github.com/carlmasters02/PickYourLinux" data-repo rel="noopener" target="_blank" aria-label="Source code on GitHub (opens in a new tab)" title="Source code on GitHub"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Theme"></button>
+        <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="siteNav">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <header class="page-head">
+        <h1>Compare</h1>
+        <p>Put up to four distros side by side. Your picks are kept in the link, so you can share a comparison.</p>
+      </header>
+      <div class="compare-pickers" id="pickers"></div>
+      <div id="compareOut"></div>
+      <div style="height:72px"></div>
+    </div>
+  </main>
+
+
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Facts checked October 2026. Distro names and logos are trademarks of their respective projects and are used here to identify them. No cookies, no trackers, no third-party requests.</p>
+      <nav aria-label="Footer">
+        <a href="https://github.com/carlmasters02/PickYourLinux" data-repo rel="noopener" target="_blank" class="gh-link"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span>Source on GitHub</span></a>
+        <a href="catalog.html">Catalog</a>
+        <a href="compare.html">Compare</a>
+        <a href="quiz.html">Quiz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/editions.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/logos.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/compare.js"></script>
+</body>
+</html>

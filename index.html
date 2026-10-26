@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PickYourLinux · The Linux family tree</title>
+  <meta name="description" content="See how Linux distributions are related, from Debian, Fedora and Arch down to the distros built on them, and find the one that fits you.">
+  <meta name="theme-color" content="#F4F5F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15171A" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="img/mark.svg" type="image/svg+xml">
+  <script>try{var t=JSON.parse(localStorage.getItem("pyl-theme-mode"));if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="PickYourLinux home">
+        <svg class="brand-mark" viewBox="0 0 26 26" aria-hidden="true">
+          <path class="b-line" d="M6 7v14.5M6 10.5h9.5M6 16h9.5M6 21.5h9.5" fill="none" stroke-width="1.7" stroke-linecap="round"/>
+          <circle class="b-root" cx="6" cy="4.5" r="3"/>
+          <circle class="b-a" cx="19" cy="10.5" r="2.5"/>
+          <circle class="b-b" cx="19" cy="16" r="2.5"/>
+          <circle class="b-c" cx="19" cy="21.5" r="2.5"/>
+        </svg>
+        <span>PickYourLinux</span>
+      </a>
+      <nav class="nav" id="siteNav" aria-label="Main">
+        <a href="index.html#family-tree" aria-current="page">Family tree</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="compare.html">Compare<span class="count" id="compareCount" hidden>0</span></a>
+        <a href="quiz.html">Quiz</a>
+      </nav>
+      <div class="header-tools">
+        <div class="jump" role="search">
+          <svg class="jump-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.75"/><path d="m10.5 10.5 3.5 3.5" stroke-linecap="round"/></svg>
+          <input id="jumpInput" type="search" placeholder="Jump to a distro" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="jumpList" aria-autocomplete="list" aria-label="Jump to a distro">
+          <kbd>/</kbd>
+          <ul class="jump-list" id="jumpList" role="listbox" hidden></ul>
+        </div>
+        <a class="icon-btn" href="https://github.com/carlmasters02/PickYourLinux" data-repo rel="noopener" target="_blank" aria-label="Source code on GitHub (opens in a new tab)" title="Source code on GitHub"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Theme"></button>
+        <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="siteNav">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <h1>Linux comes in hundreds of versions. Let's find yours.</h1>
+        <div class="hero-copy">
+          <p>Linux is a free alternative to Windows and macOS. It comes in many versions, called distributions, each made by a different team. This site explains how they're related and helps you choose one, whether you've never used Linux or you've run it for years.</p>
+          <div class="actions">
+            <a class="btn btn-primary btn-lg" href="quiz.html">Take the quiz</a>
+            <a class="btn btn-lg" href="#family-tree">See the family tree</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro" aria-labelledby="introTitle">
+      <div class="wrap intro-grid">
+        <div class="intro-copy">
+          <h2 id="introTitle">Linux in two minutes</h2>
+          <div class="beat">
+            <h3>Linux is the core, not the whole thing</h3>
+            <p>Linux is a <strong>kernel</strong>: the part of an operating system that talks to your hardware. Linus Torvalds started it in 1991, and it's free and open source, so anyone can use it, study it and build on it. It already runs most of the world's servers, every Android phone and the Steam Deck.</p>
+          </div>
+          <div class="beat">
+            <h3>A distro makes it usable</h3>
+            <p>On its own, a kernel isn't something you can sit down and use. A <strong>distribution</strong>, or distro, wraps it in everything else: a desktop, apps, a way to install software, and decisions about how it all fits together. Ubuntu, Fedora and Linux Mint are all distros. They run the same kinds of apps, but they look, feel and update differently.</p>
+          </div>
+          <div class="beat">
+            <h3>Most distros are built on another one</h3>
+            <p>Because Linux is open, anyone can take an existing distro and change it. That's how most distros began: as Debian, Fedora or Arch with different choices on top. So they form a family tree, and where a distro sits in it tells you a lot about how it will behave day to day.</p>
+          </div>
+        </div>
+
+        <figure class="stack-fig">
+          <div class="stack">
+            <div class="layer" style="grid-row:1"><strong>Apps</strong><span>Firefox, LibreOffice, Steam, GIMP</span></div>
+            <div class="layer" style="grid-row:2"><strong>Desktop environment</strong><span>GNOME, KDE Plasma, Cinnamon, Xfce</span></div>
+            <div class="layer" style="grid-row:3"><strong>Package manager and system tools</strong><span class="mono">apt, dnf, pacman, zypper</span></div>
+            <div class="layer kernel" style="grid-row:4"><strong>Linux kernel</strong><span>Drivers, memory, processes</span></div>
+            <div class="layer hw" style="grid-row:5"><strong>Your computer</strong></div>
+            <div class="note distro" style="grid-row:1 / 4">Each distro picks and configures these</div>
+            <div class="note" style="grid-row:4">Shared by every distro</div>
+          </div>
+          <figcaption>What you're choosing when you choose a distro. The kernel is common to all of them; the layers above it are where they differ.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="explorer" id="family-tree" aria-labelledby="explorerTitle">
+      <div class="wrap">
+        <div class="section-head explorer-head">
+          <h2 id="explorerTitle">The family tree</h2>
+          <p>Start at one of the three roots at the top and follow its branches down. Select any distro to see what it is and how it relates to its parent. Not sure where to look? <a href="quiz.html">The quiz</a> can point you to the right branch.</p>
+        </div>
+        <div class="explorer-bar">
+          <div class="segmented" role="group" aria-label="View">
+            <button type="button" data-view="graph" aria-pressed="true">Graph</button>
+            <button type="button" data-view="tree" aria-pressed="false">Tree</button>
+          </div>
+          <div class="legend">
+            <span><svg viewBox="0 0 28 8" aria-hidden="true"><path d="M0 4h28" stroke="currentColor" stroke-width="1.6"/></svg>Uses the parent's packages</span>
+            <span><svg viewBox="0 0 28 8" aria-hidden="true"><path d="M0 4h28" stroke="currentColor" stroke-width="1.6" stroke-dasharray="5 4"/></svg>Rebuilt in its own repositories</span>
+          </div>
+          <div class="spacer"></div>
+          <div class="legend" aria-hidden="true">
+            <span class="fam-key" data-family="debian"><i></i>Debian</span>
+            <span class="fam-key" data-family="fedora"><i></i>Fedora</span>
+            <span class="fam-key" data-family="arch"><i></i>Arch</span>
+            <span class="fam-key" data-family="independent"><i></i>Independent</span>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="graph" id="graph" aria-label="Interactive family graph. Use the Tree view for a text list.">
+            <div class="graph-controls">
+              <button class="icon-btn" type="button" data-zoom="in" aria-label="Zoom in"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+              <button class="icon-btn" type="button" data-zoom="out" aria-label="Zoom out"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 10h12"/></svg></button>
+              <button class="icon-btn" type="button" data-zoom="fit" aria-label="Fit to screen"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V3h4M13 3h4v4M17 13v4h-4M7 17H3v-4"/></svg></button>
+            </div>
+            <p class="graph-hint"><span class="pointer-only">Hover to trace a lineage. </span>Drag to pan, scroll or pinch to zoom.</p>
+          </div>
+          <div class="tree" id="tree" hidden></div>
+          <aside class="peek" id="peek" hidden aria-live="polite"></aside>
+        </div>
+        <noscript><p class="muted" style="margin-top:12px">The family tree needs JavaScript. The <a href="catalog.html">catalog</a> lists every distro too.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="familiesTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="familiesTitle">Three roots, and a few loners</h2>
+          <p>A distro's family decides a lot about daily life: which package manager you use, which guides apply to you, and how quickly new software arrives.</p>
+        </div>
+        <div class="families" id="families"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="startTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="startTitle">Try a distro without installing it</h2>
+          <p>Almost every distro can run straight from a USB stick, so you can test it on your own computer before changing anything.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Pick a distro</h3>
+            <p>Take the <a href="quiz.html">quiz</a> or browse the <a href="catalog.html">catalog</a>, then download the ISO file from the distro's official site.</p>
+          </li>
+          <li>
+            <h3>Write it to a USB stick</h3>
+            <p>Use Fedora Media Writer, balenaEtcher or Ventoy. Ventoy lets you keep several ISOs on one stick. Writing erases whatever is on the stick.</p>
+          </li>
+          <li>
+            <h3>Boot it live</h3>
+            <p>Restart, open your PC's boot menu (often F12, F10 or Esc) and choose the USB. Nothing is installed until you run the installer.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="callout">
+          <h2>Not sure where to start?</h2>
+          <p>Questions that adapt to what you do, the hardware you have and your dealbreakers. You get a top match, the reasons it fits, honest caveats, what to sort out before switching and close alternatives. There’s a two-minute quick version too.</p>
+          <a class="btn btn-primary btn-lg" href="quiz.html">Start the quiz</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Facts checked October 2026. Distro names and logos are trademarks of their respective projects and are used here to identify them. No cookies, no trackers, no third-party requests.</p>
+      <nav aria-label="Footer">
+        <a href="https://github.com/carlmasters02/PickYourLinux" data-repo rel="noopener" target="_blank" class="gh-link"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span>Source on GitHub</span></a>
+        <a href="catalog.html">Catalog</a>
+        <a href="compare.html">Compare</a>
+        <a href="quiz.html">Quiz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/editions.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/logos.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/vendor/d3.min.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
